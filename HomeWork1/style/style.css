@@ -1,0 +1,33 @@
+body {
+    background-color: rgb(245, 216, 216);
+}
+
+.header {
+    text-align: right;
+    background-color: aqua;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(105, 103, 103);
+}
+
+.heading {
+    text-align: center;
+    background-color: aqua;
+}
+
+img {
+    width: 250px;
+    height: 300px;
+    border-radius: 25px;
+    border: 2px solid aqua;
+}
+
+p {
+    color: rgb(97, 97, 97);
+}
+
+.par {
+    width: 250px;
+}
