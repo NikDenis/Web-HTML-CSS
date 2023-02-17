@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
+
 .header {
     padding: 54px 0;
     margin: 0 0 81px 0;
@@ -12,7 +16,6 @@
     margin: 0 0 17px 0;
     width: 522px;
     height: 222px;
-    font-family: 'Gilroy-Bold';
     font-size: 60px;
     line-height: 70px;
 
@@ -24,7 +27,6 @@
     margin: 0 0 37px 0;
     width: 466px;
     height: 48px;
-    font-family: 'Gilroy-Medium';
     font-size: 20px;
     line-height: 23px;
 
@@ -32,17 +34,21 @@
 }
 
 .top-btn-start {
+    margin: 0 72px 0 0;
     width: 140px;
     height: 50px;
     background: #F25822;
     box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
     border-radius: 50px;
+    border: 0;
+    font-size: 15px;
+    line-height: 18px;
+    color: #FFFFFF;
 }
 
-.top-btn-watch {
+.top-link-watch {
     width: 90px;
     height: 19px;
-    font-family: 'Gilroy-Bold';
     font-size: 15px;
     line-height: 18px;
     color: #AAAAAA;
