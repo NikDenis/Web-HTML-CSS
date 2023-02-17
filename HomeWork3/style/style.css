@@ -1,0 +1,57 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.header {
+    padding: 54px 0;
+    margin: 0 0 81px 0;
+}
+
+.top-content-title {
+    margin: 0 0 17px 0;
+    width: 522px;
+    height: 222px;
+    font-family: 'Gilroy-Bold';
+    font-size: 60px;
+    line-height: 70px;
+
+    color: #000000;
+
+}
+
+.top-content-txt {
+    margin: 0 0 37px 0;
+    width: 466px;
+    height: 48px;
+    font-family: 'Gilroy-Medium';
+    font-size: 20px;
+    line-height: 23px;
+
+    color: #888888;
+}
+
+.top-btn-start {
+    width: 140px;
+    height: 50px;
+    background: #F25822;
+    box-shadow: 4px 4px 8px rgba(242, 88, 34, 0.2);
+    border-radius: 50px;
+}
+
+.top-btn-watch {
+    width: 90px;
+    height: 19px;
+    font-family: 'Gilroy-Bold';
+    font-size: 15px;
+    line-height: 18px;
+    color: #AAAAAA;
+}
+
+.top-content {
+    margin: 0 0 162px 0;
+}
+
+.top-logos {
+    padding: 97px 0 96px 0;
+}
