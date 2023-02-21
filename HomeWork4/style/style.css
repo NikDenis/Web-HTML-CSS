@@ -73,6 +73,15 @@ a {
     color: #000000;
 }
 
+.top-header-logo:hover {
+    color: #F25822;
+}
+
+.top-header-logo:active {
+    color: #000000;
+}
+
+
 .logo-txt__color {
     color: #F25822;
 }
