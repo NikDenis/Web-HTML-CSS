@@ -222,8 +222,6 @@ a {
     padding: 0 0 100px 0;
 }
 
-.content-list-wrp {}
-
 .list-content-block {
     display: flex;
     justify-content: space-between;
@@ -280,6 +278,23 @@ a {
     font-size: 15px;
     line-height: 22px;
     color: #666666;
+}
+
+.content-item-btn {
+    font-family: 'Gilroy Bold';
+    font-size: 11px;
+    line-height: 16px;
+    border: 0;
+    background-color: #FFFFFF;
+    color: #000000;
+}
+
+.content-item-btn:hover {
+    color: #F25822;
+}
+
+.content-item-btn:active {
+    color: #000000;
 }
 
 .training {
