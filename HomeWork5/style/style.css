@@ -384,15 +384,13 @@ a {
     position: relative;
 }
 
-.training-item-btn-txt::before {
-    content: "";
+.training-item-btn-txt::after {
+    content: ">";
     display: block;
-    background-image: url(../img/training-btn-Vector.svg);
     background-size: cover;
     position: absolute;
-    top: 5px;
-    left: 75px;
     width: 4px;
     height: 8px;
-
+    right: -12px;
+    bottom: 8px;
 }
