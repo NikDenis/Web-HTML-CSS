@@ -44,12 +44,18 @@ a {
     gap: 859px;
 }
 
+.header-link-wrp {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+}
+
 .logo-header-wrp-btn {
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 18px 0 19px 0;
-    gap: 41px;
     max-width: 111px;
     width: 100%;
 }
@@ -61,10 +67,9 @@ a {
 .page-header-wrp-btn {
     display: flex;
     align-content: center;
-    justify-content: center;
+    justify-content: space-between;
     align-items: center;
     margin: 18px 0 20px 0;
-    gap: 33px;
     max-width: 168px;
     width: 100%;
 }
@@ -158,7 +163,7 @@ a {
 
 .categories-list {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, minmax(232px, 360px));
     gap: 30px;
 }
 
@@ -169,7 +174,10 @@ a {
     background-size: cover;
     box-sizing: border-box;
     background-repeat: no-repeat;
+    background-color: rgba(33, 22, 22, 0.7);
+    background-blend-mode: darken;
 }
+
 
 .categories-photo2 {
     background-image: url(../img/categories-photo2.jpg);
@@ -223,10 +231,14 @@ a {
 
 .products-list {
     display: grid;
-    grid-template-columns: repeat(3, 360px);
+    grid-template-columns: repeat(3, 30%);
     gap: 30px;
     margin: 0 0 48px 0;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
 }
+
 
 .products-list-item {
     list-style: none;
@@ -237,11 +249,11 @@ a {
 }
 
 .wrp-color {
-    margin: 0;
     background-color: #F8F8F8;
 }
 
 .products-item-photo-wrp {}
+
 
 .products-item-link {}
 
@@ -249,6 +261,7 @@ a {
     display: block;
     margin: 0 auto;
     box-sizing: border-box;
+    width: 100%;
 }
 
 .products-item-title_h3 {
@@ -302,3 +315,150 @@ a {
 }
 
 /* ============= END content ============== */
+
+@media (max-width: 1024px) {
+    .center {
+        max-width: 736px;
+    }
+
+    .logo-header-wrp-btn {
+        max-width: 111px;
+        width: 100%;
+    }
+
+    .page-header-wrp-btn {
+        max-width: 168px;
+        width: 100%;
+    }
+
+    .content-banner {
+        height: 368px;
+    }
+
+    .content-banner-wrp {
+        padding-left: calc(50% - 384px);
+        padding-right: calc(50% - 384px);
+        max-width: 769px;
+    }
+
+    .content-banner-wrp-img {
+        width: 386px;
+    }
+
+    .content-banner-title {
+        font-size: 44px;
+        font-weight: 900;
+        line-height: 52px;
+        margin: 138px auto 0 auto;
+        max-width: 311px;
+    }
+
+    .content-banner-subtitle {
+        font-size: 24px;
+        font-weight: 700;
+        line-height: 29px;
+    }
+
+
+    .content-cateries {
+        margin: 0 auto 109px auto;
+    }
+
+    .categories-list {
+        display: grid;
+        grid-template-columns: repeat(3, 232px);
+        gap: 19px;
+    }
+
+    .categories-list-item {
+        padding: 59px 0 58px;
+    }
+
+    .item-big {
+        padding: 33px 0
+    }
+
+    .products-txt {
+        margin: 0 0 72px 0;
+    }
+
+    .products-list {
+        grid-template-columns: repeat(2, minmax(300px, 360px));
+        gap: 16px;
+        margin: 0 0 32px 0;
+    }
+}
+
+@media (max-width: 767px) {
+
+    .center {
+        max-width: 360px;
+    }
+
+    .page-header-wrp-btn {
+        max-width: 35px;
+        width: 100%;
+        justify-content: center;
+    }
+
+    .header-account-btn {
+        display: none;
+    }
+
+    .header-cart-btn {
+        display: none;
+    }
+
+    .content-banner-wrp-img {
+        display: none;
+        font-size: 38px;
+        line-height: 45.6px;
+    }
+
+    .content-banner-title {
+        text-align: left;
+        font-size: 38px;
+        line-height: 45.6px;
+    }
+
+    .content-banner-title::before {
+        height: 62px;
+        left: -21px;
+        top: 5px;
+    }
+
+    .content-banner-subtitle {
+        text-align: left;
+        font-size: 20px;
+        line-height: 24px;
+    }
+
+    .content-cateries {
+        margin: 0 auto 64px auto;
+    }
+
+    .categories-list {
+        grid-template-columns: repeat(1, minmax(232px, 343px));
+        gap: 32px;
+        justify-content: center;
+    }
+
+    .categories-list-item {
+        padding: 105px 0 102px;
+    }
+
+    .item-big {
+        grid-row: span 1;
+        grid-column: span 1;
+        padding: 30px 0 31px;
+    }
+
+    .products-txt {
+        margin: 0 0 64px 0;
+    }
+
+    .products-list {
+        margin: 0 0 40px 0;
+        grid-template-columns: repeat(1, minmax(300px, 360px));
+    }
+}
