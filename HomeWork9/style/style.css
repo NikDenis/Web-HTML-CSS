@@ -1,26 +1,10 @@
-@font-face {
-    font-family: 'Lato Regular';
-    src: url('../fonts/lato_regular.eot');
-    /* IE 9 Compatibility Mode */
-    src: url('../fonts/lato_regular.eot?#iefix') format('embedded-opentype'),
-        /* IE < 9 */
-        url('../fonts/lato_regular.woff2') format('woff2'),
-        /* Super Modern Browsers */
-        url('../fonts/lato_regular.woff') format('woff'),
-        /* Firefox >= 3.6, any other modern browser */
-        url('../fonts/lato_regular.ttf') format('truetype'),
-        /* Safari, Android, iOS */
-        url('../fonts/lato_regular.svg#lato_regular') format('svg');
-    /* Chrome < 4, Legacy iOS */
-}
-
 * {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: 'Lato Regular';
+    font-family: Lato;
     font-style: normal;
     color: #222222;
 }
@@ -114,21 +98,9 @@ a {
     padding-right: 8px;
 }
 
-.menu-btn {}
-
-#menu-switch {}
-
-.header-menu-list {}
-
 .header-menu-list-item {
     list-style: none;
 }
-
-.header-menu-list-close-btn {}
-
-.menu-list-title {}
-
-.header-menu-sublist {}
 
 .header-menu-sublist-item {
     list-style: none;
@@ -215,6 +187,7 @@ a {
     text-align: left;
     margin: 289px auto 0 auto;
     max-width: 405px;
+    text-transform: uppercase;
 }
 
 .content-banner-title::before {
@@ -275,14 +248,13 @@ a {
     padding: 65px 0
 }
 
-.categoties-item-link {}
-
 .categoties-item-txt {
     text-align: center;
     color: #FFF;
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    text-transform: uppercase;
 }
 
 .categories-item-subtitle {
@@ -291,9 +263,8 @@ a {
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
+    text-transform: uppercase;
 }
-
-.products {}
 
 .products-subtitle {
     text-align: center;
@@ -321,11 +292,75 @@ a {
     justify-items: center;
 }
 
-
 .products-list-item {
     list-style: none;
+    display: block;
+    position: relative;
+    box-sizing: border-box;
 }
 
+/* Наведение на карточку */
+.products-list-item:hover .products-item-btn {
+    visibility: visible;
+}
+
+.products-item-btn:hover {
+    background-color: #ccc;
+    color: #000;
+    border: 1px solid #000;
+}
+
+.products-item-btn:hover svg {
+    fill: #000;
+}
+
+.products-item-btn:active {
+    background-color: transparent;
+    color: #fff;
+    border: 1px solid #fff;
+}
+
+.products-item-btn:active svg {
+    fill: #fff;
+}
+
+.products-list-item:hover .products-item-photo-wrp::before {
+    content: "";
+    display: block;
+    width: 100%;
+    height: 100%;
+    background: rgba(58, 56, 56, 0.86);
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.products-item-btn {
+    /* display: none; */
+    display: flex;
+    visibility: hidden;
+    justify-content: center;
+    align-items: center;
+    width: 160px;
+    padding: 10px;
+    box-sizing: border-box;
+    border: 1px solid #FFFFFF;
+    background: transparent;
+    text-align: center;
+    font-size: 14px;
+    line-height: 17px;
+    color: #FFFFFF;
+    position: absolute;
+    top: 30%;
+    left: calc(50% - 80px);
+}
+
+.products-item-btn svg {
+    fill: #fff;
+    margin: 0 11px 0 0;
+}
+
+/* Наведение на карточку */
 .products-item-cart {
     padding: 0 0 24px 0;
 }
@@ -334,10 +369,15 @@ a {
     background-color: #F8F8F8;
 }
 
-.products-item-photo-wrp {}
-
-
-.products-item-link {}
+.products-item-photo-wrp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    background-color: #F7E4E2;
+    box-sizing: border-box;
+    position: relative;
+}
 
 .products-item-photo {
     display: block;
@@ -353,6 +393,7 @@ a {
     font-size: 13px;
     line-height: 16px;
     color: #000000;
+    text-transform: uppercase;
 }
 
 .products-item-txt {
@@ -493,8 +534,13 @@ a {
 }
 
 .registration-form-content {
+    display: flex;
     max-width: 557px;
     width: 100%;
+    flex-direction: column;
+    align-content: center;
+    justify-content: center;
+    align-items: center;
 }
 
 .registration-form-title {
@@ -503,6 +549,7 @@ a {
     line-height: 40px;
     text-align: center;
     color: #222224;
+    text-transform: uppercase;
 }
 
 .registration-form-subtitle {
@@ -511,7 +558,65 @@ a {
     line-height: 30px;
     text-align: center;
     color: #222224;
+    margin: 0 0 32px 0;
+    text-transform: uppercase;
+}
 
+.registration-form {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 356px;
+    width: 100%;
+}
+
+.registration-form-email {
+    max-width: 256px;
+    width: 100%;
+    padding: 16px 16px 16px 22px;
+    background: #E1E1E1;
+    border-radius: 30px 0 0 30px;
+    border: none;
+    box-sizing: border-box;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    opacity: 0.67;
+}
+
+/* .registration-form-email::placeholder {
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    color: #222224;
+    opacity: 0.67;
+} */
+
+.registration-form-btn {
+    max-width: 100px;
+    width: 100%;
+    padding: 16px;
+    background: #F16D7F;
+    border-radius: 0 30px 30px 0;
+    border: none;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 17px;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: #FFFFFF;
+}
+
+.registration-form-btn:hover {
+    background: #FFFFFF;
+    color: #F16D7F;
+}
+
+.registration-form-btn:active {
+    background: #F16D7F;
+    color: #FFFFFF;
 }
 
 /* ============= END footer registration-blok ============== */
@@ -652,6 +757,35 @@ a {
         gap: 16px;
         margin: 0 0 32px 0;
     }
+
+    .information-blok-wrp {
+        padding: 40px 0 64px 0;
+    }
+
+    .information-list {
+        flex-direction: column;
+        gap: 49px;
+    }
+
+    .registration-blok {
+        padding: 64px 0 140px 0;
+        background-size: cover;
+    }
+
+    .registration-blok-wrp {
+        flex-direction: column;
+        min-height: auto;
+        gap: 48px;
+    }
+
+    .registration-form-title {
+        line-height: 38.88px;
+    }
+
+    .registration-form-subtitle {
+        margin-bottom: 27px;
+        line-height: 29.16px;
+    }
 }
 
 @media (max-width: 767px) {
@@ -731,4 +865,46 @@ a {
         max-width: 280px;
         width: 100%;
     }
+
+    .information-blok-wrp {
+        padding: 44px 0 75px 0;
+    }
+
+    .registration-blok {
+        padding: 60px 0 103px 0;
+    }
+
+    .registration-blok-wrp {
+        gap: 55px;
+    }
+
+    .registration-ava-photo {
+        max-width: 92px;
+        width: 100%;
+        height: 86px;
+    }
+
+    .registration-ava-txt {
+        max-width: 343px;
+        width: 100%;
+        font-size: 18px;
+        line-height: 22px;
+    }
+
+    .registration-form-title {
+        line-height: 36.77px;
+    }
+
+    .registration-form-subtitle {
+        font-size: 14px;
+        line-height: 21.45px;
+    }
+
+    .page-footer-wrp {
+        flex-direction: column-reverse;
+        padding: 40px 0 9px 0;
+        gap: 22px;
+    }
+
+
 }
