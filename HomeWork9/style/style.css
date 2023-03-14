@@ -329,7 +329,7 @@ a {
 /* ============= content ============== */
 .content-banner {
     background-color: #F1E4E6;
-    height: 764px;
+    min-height: 764px;
     display: flex;
     margin: 0 0 65px 0;
 }
