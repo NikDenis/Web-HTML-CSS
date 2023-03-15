@@ -876,7 +876,7 @@ a {
     }
 
     .content-banner {
-        height: 368px;
+        min-height: 368px;
     }
 
     .content-banner-wrp {
@@ -981,6 +981,11 @@ a {
     .header-cart-btn {
         display: none;
     }
+
+    .content-banner {
+        min-height: 363px;
+    }
+
 
     .content-banner-wrp-img {
         display: none;
